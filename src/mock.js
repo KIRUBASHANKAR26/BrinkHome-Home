@@ -34,3 +34,18 @@ export const SensorsAvailable = [
     status:'CLOSE'
   }
 ];
+
+export const TempertureMock = [
+  {
+    label: 'Outside',
+    degree:'64'
+  },
+  {
+    label: 'Thermostat',
+    degree:'74'
+  },
+  {
+    label: 'Thermometer',
+    degree:'69'
+  }
+];
