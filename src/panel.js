@@ -18,7 +18,7 @@ const Panel = ({panelStatus}) => {
       <Button status={panel} onClick={handlePanelClick} >
         <HiShieldCheck/>
       </Button>
-      <p style={{fontWeight:'600',padding: '1rem 0.5rem',textAlign:'center',fontSize:'1.2rem'}}>Panel</p>
+      <p style={{fontWeight:'600',textAlign:'center',fontSize:'1.2rem'}}>Panel</p>
       <DoorStatus as="p" status={panel}>
           {panel ? panelStatus : `DIS${panelStatus}`}
         </DoorStatus>
