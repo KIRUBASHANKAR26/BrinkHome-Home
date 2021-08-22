@@ -6,16 +6,30 @@ import {
   LampMock,
   PanelMock,
   SensorsAvailable,
-  TempertureMock
+  TempertureMock,
+  ImageMock
 } from './mock.js';
 import { ButtonContainer } from './door.js';
 import Panel from './panel.js';
 import Sensors from './sensor.js';
 import styled from 'styled-components';
 import Temperature from './temperature.js';
+import Images from './Image.js';
 
 export const SensorContainer = styled(ButtonContainer)`
   flex-direction: column;
+`;
+const NoImages = styled.div`
+  background: #000;
+  width: 100%;
+  max-width: 500px;
+  height: 230px;
+  border-radius: 4px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const App = () => {
   return (
@@ -40,10 +54,15 @@ const App = () => {
       <SensorContainer>
         <h2>Temperatures</h2>
         {TempertureMock?.map(({ label, degree }, index) => (
-
-         < Temperature key={index} label={label} degree={degree} />
+          <Temperature key={index} label={label} degree={degree} />
         ))}
-      </SensorContainer>  
+      </SensorContainer>
+
+      {ImageMock.length ? (
+        ImageMock?.map(({ src }, index) => <Images key={index} url={src} />)
+      ) : (
+        <NoImages>No Recent Images</NoImages>
+      )}
     </div>
   );
 };

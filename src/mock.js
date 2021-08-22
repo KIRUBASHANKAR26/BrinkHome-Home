@@ -49,3 +49,7 @@ export const TempertureMock = [
     degree:'69'
   }
 ];
+
+export const ImageMock = [
+  
+]
