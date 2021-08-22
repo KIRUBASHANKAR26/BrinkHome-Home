@@ -54,8 +54,8 @@ const Door = () => {
         <Button status={frontDoor} onClick={handleFrontDoor}>
           {frontDoor ? <IoIosUnlock /> : <IoIosLock />}
         </Button>
-        <p>Front Door</p>
-        <DoorStatus as="p" status={frontDoor}>
+        <div>Front Door</div>
+        <DoorStatus status={frontDoor}>
           {frontDoor ? 'Unlocked' : 'Locked'}
         </DoorStatus>
       </ButtonWrapper>
@@ -63,8 +63,8 @@ const Door = () => {
         <Button status={backDoor} onClick={handleBackDoor}>
           {backDoor ? <IoIosUnlock /> : <IoIosLock />}
         </Button>
-        <p>Back Door</p>
-        <DoorStatus as="p" status={backDoor}>
+        <div>Back Door</div>
+        <DoorStatus status={backDoor}>
           {backDoor ? 'Unlocked' : 'Locked'}
         </DoorStatus>
       </ButtonWrapper>
