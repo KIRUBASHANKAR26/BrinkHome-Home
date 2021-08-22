@@ -21,7 +21,11 @@ export const DoorStatus = styled(Button)`
   padding: 0.5rem 0;
 `;
 export const ButtonWrapper = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
 `;
 export const ButtonContainer = styled.div`
   display: flex;
