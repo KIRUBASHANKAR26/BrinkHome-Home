@@ -10,7 +10,7 @@ import {
 } from './mock.js';
 import { ButtonContainer } from './door.js';
 import Panel from './panel.js';
-import Sensor from './sensor.js';
+import Sensors from './sensor.js';
 import styled from 'styled-components';
 import Temperature from './temperature.js';
 
@@ -34,15 +34,16 @@ const App = () => {
       <SensorContainer>
         <h2>Sensor</h2>
         {SensorsAvailable?.map(({ sensor, status }, index) => (
-          <Sensor key={index} sensor={sensor} status={status} />
+          <Sensors key={index} sensor={sensor} status={status} />
         ))}
       </SensorContainer>
-      {/* <SensorContainer>
+      <SensorContainer>
         <h2>Temperatures</h2>
-        {TempertureMock?.map(({ lable, degree }, index) => (
-          <Temperature key={index} lable={lable} degree={degree} />
+        {TempertureMock?.map(({ label, degree }, index) => (
+
+         < Temperature key={index} label={label} degree={degree} />
         ))}
-      </SensorContainer> */}
+      </SensorContainer>  
     </div>
   );
 };

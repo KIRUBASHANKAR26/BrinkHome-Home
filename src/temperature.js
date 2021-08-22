@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HiShieldCheck } from 'react-icons/hi';
-import { SensorWrapper,Sensor,Wrapper,SensorStatus } from './sensor.js'
+import { SensorWrapper, Sensor, Wrapper, SensorStatus } from './sensor.js';
 
-
-const Temperature = ({ sensor, degree }) => {
- 
+const Temperature = ({ label, degree }) => {
+  console.log('label', label);
 
   return (
     <Wrapper>
       <SensorWrapper>
         <Sensor>
-          <HiShieldCheck />
+          <HiShieldCheck style={{ marginRight: '1rem' }} />
           {label}
         </Sensor>
-        <SensorStatus>{degree}</SensorStatus>
+        <SensorStatus>
+          {degree}
+          {'\u00b0'}
+        </SensorStatus>
       </SensorWrapper>
     </Wrapper>
   );
