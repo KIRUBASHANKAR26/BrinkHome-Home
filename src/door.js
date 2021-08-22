@@ -18,6 +18,7 @@ export const DoorStatus = styled(Button)`
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.5px;
+  padding: 0.5rem 0;
 `;
 export const ButtonWrapper = styled.div`
   display: flex;
