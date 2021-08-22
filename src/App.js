@@ -15,6 +15,7 @@ import Sensors from './sensor.js';
 import styled from 'styled-components';
 import Temperature from './temperature.js';
 import Images from './Image.js';
+import 'antd/dist/antd.css';
 
 export const SensorContainer = styled(ButtonContainer)`
   flex-direction: column;

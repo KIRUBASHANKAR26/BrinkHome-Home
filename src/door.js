@@ -6,11 +6,11 @@ export const Button = styled.button`
   font-size: 4rem;
   color: ${({ status }) => (status ? '#5AB554' : '#C83D34')};
   border-radius: 50%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border: 2px solid ${({ status }) => (status ? '#5AB554' : '#C83D34')};
   background-color: transparent;
-  cursor:pointer;
-  outline:none;
+  cursor: pointer;
+  outline: none;
 `;
 export const DoorStatus = styled(Button)`
   border: none;
@@ -28,7 +28,7 @@ export const ButtonContainer = styled.div`
   width: 100%;
   max-width: 500px;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1rem;
   margin: 1rem;
   box-shadow: 0px 0px 10px 5px #f5f5f5;
 `;
