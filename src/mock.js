@@ -10,3 +10,9 @@ export const LampMock = [
     lampPercentage: '100%'
   }
 ];
+
+export const PanelMock = [
+  {
+    panelStatus: 'ARMED'
+  }
+];

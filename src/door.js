@@ -9,12 +9,14 @@ export const Button = styled.button`
   padding: 0.5rem 1rem;
   border: 2px solid ${({ status }) => (status ? '#5AB554' : '#C83D34')};
   background-color: transparent;
+  cursor:pointer;
+  outline:none;
 `;
 export const DoorStatus = styled(Button)`
   border: none;
   text-align: center;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 0.5rem 0;
 `;
@@ -28,7 +30,7 @@ export const ButtonContainer = styled.div`
   justify-content: space-around;
   padding: 2rem;
   margin: 1rem;
-  box-shadow: 0px 0px 4px 1px gray;
+  box-shadow: 0px 0px 10px 5px #f5f5f5;
 `;
 const Door = () => {
   const [frontDoor, setFrontDoor] = useState(false);

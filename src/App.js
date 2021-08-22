@@ -2,8 +2,9 @@ import React from 'react';
 import './style.css';
 import Door from './door.js';
 import Lamp from './lamp.js';
-import { LampMock } from './mock.js';
+import { LampMock,PanelMock } from './mock.js';
 import { ButtonContainer } from './door.js';
+import Panel from './panel.js';
 
 export default function App() {
   return (
@@ -18,6 +19,12 @@ export default function App() {
           />
         ))}
       </ButtonContainer>
+      {
+
+        PanelMock && 
+        <Panel panelStatus={PanelMock[0].panelStatus}/>
+      }
+      
     </div>
   );
 }

@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const LampButton = styled(Button)`
   color: ${({ status }) => (status ? 'yellow' : 'gray')};
   border:none;
-  box-shadow: 0px 0px 3px 4px ${({ status }) => (status ? 'rgba(216,216,46,0.68)' : 'gray')};
+  box-shadow: 0px 0px 10px 5px ${({ status }) => (status ? 'rgba(216,216,46,0.68)' : '#F5F5F5')};
 `
 
 const LightPercentage = styled.div`
