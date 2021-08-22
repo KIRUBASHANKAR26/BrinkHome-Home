@@ -16,3 +16,21 @@ export const PanelMock = [
     panelStatus: 'ARMED'
   }
 ];
+
+export const SensorsAvailable = [
+  {
+    sensor: 'Motion Detector',
+    icon:'FaRunning',
+    status:'ACTIVATED'
+  },
+  {
+    sensor: 'Front Door',
+    icon:'IoUnlinkOutline',
+    status:'CLOSE'
+  },
+  {
+    sensor: 'Back Door',
+    icon:'IoUnlinkOutline',
+    status:'CLOSE'
+  }
+];
