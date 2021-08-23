@@ -7,3 +7,28 @@ p {
   margin: 0;
   box-sizing: border-box;
 }
+.btns{
+  color: #000;
+  background:#E7E7E7;
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.buttonWrapper :last-child{
+  border-radius: 0 4px 4px 0;
+}
+.buttonWrapper :first-child{
+  border-radius: 4px 0 0 4px;
+}
+.buttonWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.selected{
+  color: #fff;
+  background-color: #18A0FB;
+}

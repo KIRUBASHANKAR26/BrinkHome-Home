@@ -15,10 +15,16 @@ import Sensors from './sensor.js';
 import styled from 'styled-components';
 import Temperature from './temperature.js';
 import Images from './Image.js';
+import Thermostat from './Thermostat.js';
 import 'antd/dist/antd.css';
+
 
 export const SensorContainer = styled(ButtonContainer)`
   flex-direction: column;
+`;
+export const TempContainer = styled(ButtonContainer)`
+  flex-direction: column;
+  align-items: center;
 `;
 const NoImages = styled.div`
   background: #000;
@@ -32,6 +38,8 @@ const NoImages = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+
 const App = () => {
   return (
     <div>
@@ -64,6 +72,10 @@ const App = () => {
       ) : (
         <NoImages>No Recent Images</NoImages>
       )}
+      <TempContainer flex-direction='coloum'>
+        <Thermostat />
+      </TempContainer>
+      
     </div>
   );
 };
