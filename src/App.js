@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Door from './door.js';
 import Lamp from './lamp.js';
@@ -19,7 +19,6 @@ import Images from './Image.js';
 import Thermostat from './Thermostat.js';
 import Recentactivity from './recentActivity';
 import 'antd/dist/antd.css';
-
 
 export const SensorContainer = styled(ButtonContainer)`
   flex-direction: column;
@@ -44,8 +43,20 @@ const NoImages = styled.div`
   justify-content: center;
 `;
 
-
 const App = () => {
+  const [panel, setPanel] = useState(false);
+  const [RecentActive, setRecentActive] = useState(RecentAciveMock);
+
+  const handlePanelClick = () => {
+    setPanel(!panel);
+    let panelInfo = {
+      label: 'Panel',
+      status: panel ? 'ARMED' : 'DISARMED',
+      time: 'Just Now'
+    };
+    RecentActive.unshift(panelInfo);
+    setRecentActive(RecentActive);
+  };
   return (
     <div>
       <Door />
@@ -58,7 +69,13 @@ const App = () => {
           />
         ))}
       </ButtonContainer>
-      {PanelMock && <Panel panelStatus={PanelMock[0].panelStatus} />}
+      {PanelMock && (
+        <Panel
+          panelStatus={PanelMock[0].panelStatus}
+          handlePanelClick={handlePanelClick}
+          panel={panel}
+        />
+      )}
       <SensorContainer>
         <h2>Sensor</h2>
         {SensorsAvailable?.map(({ sensor, status }, index) => (
@@ -77,12 +94,12 @@ const App = () => {
       ) : (
         <NoImages>No Recent Images</NoImages>
       )}
-      <TempContainer flex-direction='coloum'>
+      <TempContainer flex-direction="coloum">
         <Thermostat />
       </TempContainer>
       <RecentContainer>
-      <h2>Recent Activity</h2>
-        {RecentAciveMock?.map(({ label, status, time }, index) => (
+        <h2>Recent Activity</h2>
+        {RecentActive?.map(({ label, status, time }, index) => (
           <Recentactivity
             key={index}
             label={label}
@@ -91,7 +108,6 @@ const App = () => {
           />
         ))}
       </RecentContainer>
-      
     </div>
   );
 };

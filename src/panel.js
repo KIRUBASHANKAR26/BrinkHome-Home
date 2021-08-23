@@ -3,14 +3,7 @@ import { ButtonContainer,Button,ButtonWrapper,DoorStatus } from './door.js';
 import { HiShieldCheck } from 'react-icons/hi';
 import styled from 'styled-components';
 
-const Panel = ({panelStatus}) => {
-
-  const [panel, setPanel] = useState(false)
-
-  const handlePanelClick = () => {
-    setPanel(!panel);
-  }
-  
+const Panel = ({panelStatus,handlePanelClick,panel}) => {
 
   return(
     <ButtonContainer>
