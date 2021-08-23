@@ -29,6 +29,9 @@ export const TempContainer = styled(ButtonContainer)`
 `;
 export const RecentContainer = styled(ButtonContainer)`
   flex-direction: column;
+  max-height: 260px;
+  overflow-y: auto;
+  justify-content: start;
 `;
 const NoImages = styled.div`
   background: #000;
@@ -51,7 +54,7 @@ const App = () => {
     setPanel(!panel);
     let panelInfo = {
       label: 'Panel',
-      status: panel ? 'ARMED' : 'DISARMED',
+      status: panel ? 'DISARMED' : 'ARMED',
       time: 'Just Now'
     };
     RecentActive.unshift(panelInfo);
