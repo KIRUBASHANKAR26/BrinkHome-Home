@@ -38,7 +38,7 @@ const Lamp = ({lampLable,lampPercentage}) => {
         <RiLightbulbFill/>
       </LampButton>
     }
-    <p style={{fontWeight:'600'}}>{lampLable}</p>
+    <span style={{fontWeight:'600'}}>{lampLable}</span>
     <LightPercentage status={lamp}>{lampPercentage}</LightPercentage>
     </ButtonWrapper>
     

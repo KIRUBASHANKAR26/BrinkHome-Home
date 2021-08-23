@@ -6,7 +6,7 @@ export const Button = styled.button`
   font-size: 4rem;
   color: ${({ status }) => (status ? '#5AB554' : '#C83D34')};
   border-radius: 50%;
-  padding: 0.5rem 1.5rem;
+  padding: 0 1rem;
   border: 2px solid ${({ status }) => (status ? '#5AB554' : '#C83D34')};
   background-color: transparent;
   cursor: pointer;
@@ -54,7 +54,7 @@ const Door = () => {
         <Button status={frontDoor} onClick={handleFrontDoor}>
           {frontDoor ? <IoIosUnlock /> : <IoIosLock />}
         </Button>
-        <div>Front Door</div>
+        <span>Front Door</span>
         <DoorStatus status={frontDoor}>
           {frontDoor ? 'Unlocked' : 'Locked'}
         </DoorStatus>
@@ -63,7 +63,7 @@ const Door = () => {
         <Button status={backDoor} onClick={handleBackDoor}>
           {backDoor ? <IoIosUnlock /> : <IoIosLock />}
         </Button>
-        <div>Back Door</div>
+        <span>Back Door</span>
         <DoorStatus status={backDoor}>
           {backDoor ? 'Unlocked' : 'Locked'}
         </DoorStatus>
