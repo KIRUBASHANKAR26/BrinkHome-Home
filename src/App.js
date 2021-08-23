@@ -44,6 +44,7 @@ const NoImages = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity:0.75;
 `;
 
 const App = () => {
