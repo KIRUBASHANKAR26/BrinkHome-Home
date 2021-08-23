@@ -7,7 +7,8 @@ import {
   PanelMock,
   SensorsAvailable,
   TempertureMock,
-  ImageMock
+  ImageMock,
+  RecentAciveMock
 } from './mock.js';
 import { ButtonContainer } from './door.js';
 import Panel from './panel.js';
@@ -16,6 +17,7 @@ import styled from 'styled-components';
 import Temperature from './temperature.js';
 import Images from './Image.js';
 import Thermostat from './Thermostat.js';
+import Recentactivity from './recentActivity';
 import 'antd/dist/antd.css';
 
 
@@ -25,6 +27,9 @@ export const SensorContainer = styled(ButtonContainer)`
 export const TempContainer = styled(ButtonContainer)`
   flex-direction: column;
   align-items: center;
+`;
+export const RecentContainer = styled(ButtonContainer)`
+  flex-direction: column;
 `;
 const NoImages = styled.div`
   background: #000;
@@ -75,6 +80,17 @@ const App = () => {
       <TempContainer flex-direction='coloum'>
         <Thermostat />
       </TempContainer>
+      <RecentContainer>
+      <h2>Recent Activity</h2>
+        {RecentAciveMock?.map(({ label, status, time }, index) => (
+          <Recentactivity
+            key={index}
+            label={label}
+            status={status}
+            time={time}
+          />
+        ))}
+      </RecentContainer>
       
     </div>
   );

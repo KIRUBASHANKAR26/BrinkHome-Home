@@ -5,7 +5,8 @@ import styled from 'styled-components';
 export const SensorWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
+  align-items: center;
 `;
 
 export const Sensor = styled.p`

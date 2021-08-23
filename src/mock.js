@@ -53,3 +53,22 @@ export const TempertureMock = [
 export const ImageMock = [
   
 ]
+
+
+export const RecentAciveMock = [
+  {
+    label: 'Panel',
+    status:'DISARMED',
+    time:'9 hours'
+  },
+  {
+    label: 'Panel',
+    status:'ARMED',
+    time:'9 hours'
+  },
+  {
+    label: 'Panel Motion',
+    status:'IDLE',
+    time:'Yesterday'
+  }
+];
